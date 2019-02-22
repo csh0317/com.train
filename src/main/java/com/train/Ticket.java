@@ -1,6 +1,6 @@
 package com.train;
 
-public class TIcket {
+public class Ticket {
     int ticket;
     int trip;
     int priec;

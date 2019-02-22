@@ -4,12 +4,17 @@ import java.util.Scanner;
 
 public class Tester {
     public static void main(String[] args) {
-        System.out.print("Please enter number of tickets: ");
         Scanner scanner = new Scanner(System.in);
-        int tick = scanner.nextInt();
-        System.out.print("How many round-trip tickets: ");
-        int trip = scanner.nextInt();
-        TIcket tk = new TIcket();
-        System.out.println("You should pay "+tk.TIcket(tick,trip));
+        int tick = 0;
+        while(true) {
+            System.out.print("Please enter number of tickets: ");
+            tick = scanner.nextInt();
+            if(tick == -1)
+                break;
+            System.out.print("How many round-trip tickets: ");
+            int trip = scanner.nextInt();
+            Ticket tk = new Ticket();
+            System.out.println("You should pay " + tk.TIcket(tick, trip));
+        }
     }
 }
